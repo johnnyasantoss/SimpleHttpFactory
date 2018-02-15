@@ -15,6 +15,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleHttpFactory.Extension
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleHttpFactory.Tests", "tests\SimpleHttpFactory.Tests\SimpleHttpFactory.Tests.csproj", "{76479BB9-1E0D-4AA5-8BCE-A9E58B087313}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "misc", "misc", "{01509AAA-E0FA-403D-BE50-81346D1A853C}"
+ProjectSection(SolutionItems) = preProject
+	readme.md = readme.md
+	.gitignore = .gitignore
+	LICENSE = LICENSE
+EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleHttpFactory.Extensions.Autofac.Tests", "tests\SimpleHttpFactory.Extensions.Autofac.Tests\SimpleHttpFactory.Extensions.Autofac.Tests.csproj", "{D8432275-C2D3-4F8F-B34A-D89AE09BDD06}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -64,10 +73,23 @@ Global
 		{76479BB9-1E0D-4AA5-8BCE-A9E58B087313}.Release|x64.Build.0 = Release|Any CPU
 		{76479BB9-1E0D-4AA5-8BCE-A9E58B087313}.Release|x86.ActiveCfg = Release|Any CPU
 		{76479BB9-1E0D-4AA5-8BCE-A9E58B087313}.Release|x86.Build.0 = Release|Any CPU
+		{D8432275-C2D3-4F8F-B34A-D89AE09BDD06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8432275-C2D3-4F8F-B34A-D89AE09BDD06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8432275-C2D3-4F8F-B34A-D89AE09BDD06}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{D8432275-C2D3-4F8F-B34A-D89AE09BDD06}.Debug|x64.Build.0 = Debug|Any CPU
+		{D8432275-C2D3-4F8F-B34A-D89AE09BDD06}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D8432275-C2D3-4F8F-B34A-D89AE09BDD06}.Debug|x86.Build.0 = Debug|Any CPU
+		{D8432275-C2D3-4F8F-B34A-D89AE09BDD06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8432275-C2D3-4F8F-B34A-D89AE09BDD06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8432275-C2D3-4F8F-B34A-D89AE09BDD06}.Release|x64.ActiveCfg = Release|Any CPU
+		{D8432275-C2D3-4F8F-B34A-D89AE09BDD06}.Release|x64.Build.0 = Release|Any CPU
+		{D8432275-C2D3-4F8F-B34A-D89AE09BDD06}.Release|x86.ActiveCfg = Release|Any CPU
+		{D8432275-C2D3-4F8F-B34A-D89AE09BDD06}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{F245EAE0-4862-4D95-B273-1EF0458C5689} = {C0DAE13C-E85C-4787-A684-B8880A8231C6}
 		{7820C83C-B8CD-4320-BD79-0D7529B7DEF8} = {51FD4FBD-D1EC-40ED-816C-1BDE217B6CBF}
 		{76479BB9-1E0D-4AA5-8BCE-A9E58B087313} = {C61A405A-5927-4F2E-BF7B-36A96D32B51F}
+		{D8432275-C2D3-4F8F-B34A-D89AE09BDD06} = {C61A405A-5927-4F2E-BF7B-36A96D32B51F}
 	EndGlobalSection
 EndGlobal

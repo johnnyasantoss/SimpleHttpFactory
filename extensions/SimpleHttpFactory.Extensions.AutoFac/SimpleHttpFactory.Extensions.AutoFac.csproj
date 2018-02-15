@@ -1,14 +1,11 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <TargetFramework>netstandard1.6</TargetFramework>
-  </PropertyGroup>
-  <ItemGroup>
-    <PackageReference Include="Autofac" Version="4.6.2" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\src\SimpleHttpFactory.csproj">
-      <Project>{F245EAE0-4862-4D95-B273-1EF0458C5689}</Project>
-      <Name>SimpleHttpFactory</Name>
-    </ProjectReference>
-  </ItemGroup>
+    <PropertyGroup>
+        <TargetFramework>netstandard1.6</TargetFramework>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="Autofac" Version="4.6.2"/>
+    </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\..\src\SimpleHttpFactory.csproj"/>
+    </ItemGroup>
 </Project>

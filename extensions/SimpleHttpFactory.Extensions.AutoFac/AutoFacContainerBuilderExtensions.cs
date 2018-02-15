@@ -4,7 +4,7 @@ using Autofac.Builder;
 
 namespace SimpleHttpFactory.Extensions.AutoFac
 {
-    public static class AutoFacContainerBuilderExtensions
+    public static class AutofacContainerBuilderExtensions
     {
         public static IRegistrationBuilder<SimpleHttpFactory, SimpleActivatorData, SingleRegistrationStyle>
             RegisterSimpleHttpFactory(
@@ -20,7 +20,8 @@ namespace SimpleHttpFactory.Extensions.AutoFac
 
                          return factory;
                      })
-                     .As<ISimpleHttpFactory>();
+                     .As<ISimpleHttpFactory>()
+                     .SingleInstance();
         }
     }
 }
