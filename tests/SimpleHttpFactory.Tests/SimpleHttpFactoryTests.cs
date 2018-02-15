@@ -12,7 +12,8 @@ namespace SimpleHttpFactory.Tests
             var baseAddress = new Uri("http://0.0.0.0:9090");
             var timeout = TimeSpan.FromMinutes(5);
 
-            sut.AddClientFactory("test",
+            sut.AddClientFactory(
+                "test",
                 opt => opt.ClientConfiguration = c =>
                 {
                     c.BaseAddress = baseAddress;
