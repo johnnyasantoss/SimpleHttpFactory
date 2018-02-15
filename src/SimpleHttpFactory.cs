@@ -21,5 +21,14 @@ namespace SimpleHttpFactory
             return action(new HttpClientOptions())
                 .Build();
         }
+
+        public void AddClientFactory(string key, Func<HttpClientOptions, HttpClientOptions> factory)
+        {
+            if (factory == null)
+                throw new ArgumentNullException(nameof(factory));
+
+            if (!_clientsFactories.TryAdd(key, factory))
+                throw new InvalidOperationException("Could not add this factory");
+        }
     }
 }
