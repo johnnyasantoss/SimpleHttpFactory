@@ -1,0 +1,8 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <ProjectGuid>{76479BB9-1E0D-4AA5-8BCE-A9E58B087313}</ProjectGuid>
+    <ProjectTypeGuids>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <TargetFramework>netstandard1.6</TargetFramework>
+  </PropertyGroup>
+</Project>

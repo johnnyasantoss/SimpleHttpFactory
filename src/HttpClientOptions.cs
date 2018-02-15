@@ -7,7 +7,7 @@ namespace SimpleHttpFactory
     {
         public HttpMessageHandler MessageHandler { get; set; }
 
-        public Func<HttpClient, HttpClient> ClientConfiguration { get; set; }
+        public Action<HttpClient> ClientConfiguration { get; set; }
 
         public bool DisposeMessageHandler { get; set; }
 
@@ -20,9 +20,9 @@ namespace SimpleHttpFactory
             else
                 client = new HttpClient(MessageHandler, DisposeMessageHandler);
 
-            return ClientConfiguration == null
-                ? client
-                : ClientConfiguration(client);
+            ClientConfiguration?.Invoke(client);
+
+            return client;
         }
     }
 }

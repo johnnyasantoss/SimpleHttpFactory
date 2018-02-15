@@ -6,11 +6,11 @@ namespace SimpleHttpFactory
 {
     public class SimpleHttpFactory : ISimpleHttpFactory
     {
-        private readonly ConcurrentDictionary<string, Func<HttpClientOptions, HttpClientOptions>> _clientsFactories;
+        private readonly ConcurrentDictionary<string, Action<HttpClientOptions>> _clientsFactories;
 
         public SimpleHttpFactory()
         {
-            _clientsFactories = new ConcurrentDictionary<string, Func<HttpClientOptions, HttpClientOptions>>();
+            _clientsFactories = new ConcurrentDictionary<string, Action<HttpClientOptions>>();
         }
 
         public HttpClient CreateClient(string key)
@@ -18,11 +18,14 @@ namespace SimpleHttpFactory
             if (!_clientsFactories.TryGetValue(key, out var action))
                 throw new InvalidOperationException("Not found");
 
-            return action(new HttpClientOptions())
-                .Build();
+            var httpClientOptions = new HttpClientOptions();
+
+            action(httpClientOptions);
+
+            return httpClientOptions.Build();
         }
 
-        public void AddClientFactory(string key, Func<HttpClientOptions, HttpClientOptions> factory)
+        public void AddClientFactory(string key, Action<HttpClientOptions> factory)
         {
             if (factory == null)
                 throw new ArgumentNullException(nameof(factory));
