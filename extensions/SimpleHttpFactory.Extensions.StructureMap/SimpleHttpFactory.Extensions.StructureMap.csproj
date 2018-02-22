@@ -1,6 +1,17 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netstandard1.3</TargetFramework>
+    <Authors>johnnyasantoss</Authors>
+    <Company />
+    <Description>A simple StructureMap helper for a simple http factory.</Description>
+    <PackageLicenseUrl>https://github.com/johnnyasantoss/SimpleHttpFactory/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/johnnyasantoss/SimpleHttpFactory</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/johnnyasantoss/SimpleHttpFactory</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>http, factory</PackageTags>
+    <Version>0.1.1</Version>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\src\SimpleHttpFactory.csproj" />

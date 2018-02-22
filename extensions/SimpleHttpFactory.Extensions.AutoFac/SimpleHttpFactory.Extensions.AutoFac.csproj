@@ -9,7 +9,7 @@
         <RepositoryUrl>https://github.com/johnnyasantoss/SimpleHttpFactory</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
         <PackageTags>http, factory</PackageTags>
-        <Version>0.1.0</Version>
+        <Version>0.1.1</Version>
         <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
         <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     </PropertyGroup>
