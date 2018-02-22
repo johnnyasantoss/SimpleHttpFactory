@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>netstandard1.6</TargetFramework>
+    <TargetFramework>netstandard1.1</TargetFramework>
     <Authors>johnnyasantoss</Authors>
     <Company />
     <Description>A simple http factory.</Description>
