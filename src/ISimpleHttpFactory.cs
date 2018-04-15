@@ -4,6 +4,6 @@ namespace SimpleHttpFactory
 {
     public interface ISimpleHttpFactory
     {
-        HttpClient CreateClient(string key);
+        HttpClient GetClient(string key);
     }
 }

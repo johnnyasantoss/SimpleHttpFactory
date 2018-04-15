@@ -23,7 +23,7 @@ namespace SimpleHttpFactory.Tests
                     c.Timeout = timeout;
                 }
             );
-            var client = simpleHttpFactory.CreateClient("test");
+            var client = simpleHttpFactory.GetClient("test");
 
             Assert.Same(baseAddress, client.BaseAddress);
             Assert.Equal(timeout, client.Timeout);
@@ -38,7 +38,7 @@ namespace SimpleHttpFactory.Tests
                 "test",
                 opt => opt.MessageHandler = new TestMessageHandler()
             );
-            var client = simpleHttpFactory.CreateClient("test");
+            var client = simpleHttpFactory.GetClient("test");
 
             var exception = await Assert.ThrowsAsync<NotImplementedException>(() => client.GetAsync("http://0.0.0.0"));
             Assert.Equal("yeah it is right", exception.Message);
@@ -50,7 +50,7 @@ namespace SimpleHttpFactory.Tests
             var simpleHttpFactory = new SimpleHttpFactory();
 
             simpleHttpFactory.AddClientFactory("test", _ => {});
-            var client = simpleHttpFactory.CreateClient("test");
+            var client = simpleHttpFactory.GetClient("test");
 
             Assert.NotNull(client);
         }

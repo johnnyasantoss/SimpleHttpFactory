@@ -14,7 +14,7 @@ namespace SimpleHttpFactory.Extensions.StructureMap.Tests
             var factory = container.GetInstance<ISimpleHttpFactory>();
             Assert.NotNull(factory);
 
-            var testClient = factory.CreateClient("test");
+            var testClient = factory.GetClient("test");
             Assert.NotNull(testClient);
         }
         
@@ -26,7 +26,7 @@ namespace SimpleHttpFactory.Extensions.StructureMap.Tests
             var factory = container.GetInstance<ISimpleHttpFactory>();
             Assert.NotNull(factory);
 
-            var testClient = factory.CreateClient("test");
+            var testClient = factory.GetClient("test");
             Assert.NotNull(testClient);
         }
     }

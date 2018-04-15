@@ -18,7 +18,7 @@ namespace SimpleHttpFactory.Extensions.Autofac.Tests
             var factory = container.Resolve<ISimpleHttpFactory>();
             Assert.NotNull(factory);
 
-            var testClient = factory.CreateClient("test");
+            var testClient = factory.GetClient("test");
             Assert.NotNull(testClient);
         }
     }
